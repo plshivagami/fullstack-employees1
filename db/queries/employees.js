@@ -38,8 +38,8 @@ export async function updateEmployee({ id, name, birthday, salary }) {
   // TODO
   const result = await db.query(
     `UPDATE employees
-     SET name = $2, birthday = $3, salary = $4
-     WHERE id = $1
+     SET name = $1, birthday = $2, salary = $3
+     WHERE id = $4
      RETURNING *;`,
     [id, name, birthday, salary]
   );

@@ -15,7 +15,7 @@ async function seedEmployees() {
   console.log("Seeding employees...");
 
   // Clear table first (optional, but often useful)
-  await db.query("DELETE FROM employees;");
+  //await db.query("DELETE FROM employees;");
 
   for (let i = 0; i < 10; i++) {
     const name = faker.person.fullName();
