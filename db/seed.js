@@ -20,6 +20,7 @@ async function seedEmployees() {
   for (let i = 0; i < 10; i++) {
     const name = faker.person.fullName();
     const birthday = faker.date.birthdate({ min: 18, max: 65, mode: "age" });
+
     const salary = faker.number.int({ min: 45000, max: 120000 });
 
     const employee = await createEmployee({ name, birthday, salary });
